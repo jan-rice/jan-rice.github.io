@@ -1,0 +1,281 @@
+<html>
+
+<head>
+    <meta charset="utf-8" />
+<meta name="description" content="" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>
+    Mac M1安装wine的究极解决办法！ | Rice的算法博客
+</title>
+<link rel="shortcut icon" href="https://lipu-pan.top/favicon.ico?v=1650528678047">
+<!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous"> -->
+<link href="https://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+<link rel="stylesheet" href="https://lipu-pan.top/styles/main.css">
+<!-- js -->
+<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://lipu-pan.top/media/js/jquery.sticky-sidebar.min.js"></script>
+<script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+<script src="https://cdn.bootcss.com/moment.js/2.23.0/moment.min.js"></script>
+<script type="text/javascript">
+    (function(c,l,a,r,i,t,y){
+        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+    })(window, document, "clarity", "script", "bipajuagkr");
+</script>
+
+
+
+        
+            
+                <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+                <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+                
+
+                    
+                            
+</head>
+
+<body>
+    <div class="main">
+        <div class="header">
+    <div class="nav">
+        <div class="logo">
+            <a href="https://lipu-pan.top">
+                <img class="avatar" src="https://lipu-pan.top/images/avatar.png?v=1650528678047" alt="">
+            </a>
+            <div class="site-title">
+                <h1>
+                    Rice的算法博客
+                </h1>
+            </div>
+        </div>
+        <span class="menu-btn fa fa-align-justify"></span>
+        <div class="menu-container">
+            <ul>
+                
+                    
+                            <li>
+                                <a href="/" class="menu">
+                                    首页
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/archives" class="menu">
+                                    归档
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/tags" class="menu">
+                                    标签
+                                </a>
+                            </li>
+                            
+                                
+                    
+                            <li>
+                                <a href="/post/about" class="menu">
+                                    关于
+                                </a>
+                            </li>
+                            
+                                
+                    
+                        <li>
+                            <a href="https://foreverblog.cn/go.html" class="menu" target="_blank">
+                                虫洞
+                            </a>
+                        </li>
+                        
+                                
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function() {
+        $(".menu-btn").click(function() {
+            $(".menu-container").slideToggle();
+        });
+        $(window).resize(function() {
+
+            if (window.matchMedia('(min-width: 960px)').matches) {
+                $(".menu-container").css('display', 'block')
+            } else {
+                $(".menu-container").css('display', 'none')
+            }
+
+        });
+    });
+</script>
+
+            <div id="main-content" class="post-detail main-container">
+                <!-- left -->
+                <div id="content" class="main-container-left">
+                    <article class="post i-card">
+                        <h2 class="post-title">
+                            Mac M1安装wine的究极解决办法！
+                        </h2>
+                        <div class="post-info">
+                            <time class="post-time">2022-04-17</time>
+                            <time><br></br>本文总阅读量<span id="busuanzi_value_page_pv"></span>次<br></br></time>
+                            
+                                <a href="https://lipu-pan.top/tag/UAtrieJ09/" class="post-tag i-tag
+                            i-tag-primary">
+                            #计算机
+                        </a>
+                                
+                                <a href="https://lipu-pan.top/tag/iOUMUf3gzf/" class="post-tag i-tag
+                            i-tag-primary">
+                            #Mac OS
+                        </a>
+                                
+                        </div>
+                        
+                            <div class="post-feature-image" style="background-image: url('https://pic.imgdb.cn/item/625bdf0b239250f7c5dcd3b5.jpg')"></div>
+                            
+
+                                <div class="post-content">
+                                    <p>在Mac M1中安装软件有时会出现问题，就比如著名Windows软件运行程序wine</p>
+<!-- more -->
+<h1 id="问题">问题</h1>
+<p>根据wine官网上的信息，使用brew install wine命令，安装过程都是很顺利的，但是当我尝试使用wine命令时：就会出现Bad CPU type in executable<br>
+就算使用Rosetta的arch --x86_64运行这个程序也不可以成功运行。这就需要一个另外的解决方法了。</p>
+<h1 id="解决">解决</h1>
+<p>使用一下命令</p>
+<pre><code class="language-bash">brew tap gcenx/wine
+brew install --cask --no-quarantine wine-crossover
+</code></pre>
+<p>当出现一下内容就是成功了！<br>
+<img src="https://pic.imgdb.cn/item/625c1e18239250f7c5512b1b.jpg" alt="" loading="lazy"><br>
+<img src="https://pic.imgdb.cn/item/625c8ca3239250f7c5f43e0e.jpg" alt="成功了！" loading="lazy"></p>
+
+                                    如果你觉得这篇文章写的不错的话，那就来赞赏一下吧！
+                                    </br>
+                                    <a href="https://jan-rice.github.io/post/buy-me-a-coffee/" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" style="height: 60px !important;width: 217px !important;" ></a>
+                                </div>
+                    </article>
+                    <!--  -->
+                    
+                        <div class="next-post">
+                            <div class="next">下一篇</div>
+                            <a href="https://lipu-pan.top/post/time_complexity/">
+                                <h3 class="post-title">
+                                    一个关于算法复杂度的不复杂教程
+                                </h3>
+                            </a>
+                        </div>
+                        
+
+                            <div id="disqus_thread"></div>
+                            <div id="gitalk-container"></div>
+                </div>
+                <!-- middle -->
+                <div class="main-container-middle"></div>
+                <!-- right -->
+                <div id="sidebar" class="main-container-right">
+                    
+                        <!-- toc -->
+                        
+    <div class="toc-card i-card ">
+        <div class="toc-title i-card-title">目录</div>
+        <div class="toc-content">
+            <ul class="markdownIt-TOC">
+<li><a href="#%E9%97%AE%E9%A2%98">问题</a></li>
+<li><a href="#%E8%A7%A3%E5%86%B3">解决</a></li>
+</ul>
+
+        </div>
+        <script>
+            function locateCatelogList() {
+                /*获取文章目录集合,可通过:header过滤器*/
+                var alis = $('.post-content :header');
+                /*获取侧边栏目录列表集合**/
+                var sidebar_alis = $('.markdownIt-TOC a');
+                /*获取滚动条到顶部的距离*/
+                var scroll_height = $(window).scrollTop();
+                for (var i = 0; i < alis.length; i++) {
+                    /*获取锚点集合中的元素分别到顶点的距离*/
+                    var a_height = $(alis[i]).offset().top;
+                    if (a_height < scroll_height) {
+                        /*高亮显示*/
+                        sidebar_alis.removeClass('on');
+                        $(sidebar_alis[i]).addClass('on');
+                    }
+                }
+            }
+            $(function() {
+                /*绑定滚动事件 */
+                $(window).bind('scroll', locateCatelogList);
+            });
+        </script>
+    </div>
+    
+                            
+
+                </div>
+
+
+
+
+            </div>
+
+
+            <div class="site-footer">
+  Made with 💛 by huangrice
+Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a> |
+  <a class="rss" href="https://lipu-pan.top/atom.xml" target="_blank">RSS</a>
+  <br></br>
+  <span id="busuanzi_container_site_pv">
+    本站总访问量<span id="busuanzi_value_site_pv"></span>次
+  </span>
+  <span id="busuanzi_container_site_uv">
+  本站访客数<span id="busuanzi_value_site_uv"></span>人次
+  </span>
+</div>
+
+<script>
+  hljs.initHighlightingOnLoad()
+</script>
+
+
+    </div>
+    <script>
+        $('#sidebar').stickySidebar({
+            topSpacing: 80,
+            // bottomSpacing: 60
+        });
+    </script>
+    
+        
+            <script>
+    window.onload = function() {
+        var gitalk = new Gitalk({
+            clientID: '06a75dc79eafdeb4f5e5',
+            clientSecret: '9dc298c4057aaf6978572a7914dde187c494084a',
+            repo: 'gitalk',
+            owner: 'jan-rice',
+            admin: ['jan-rice'],
+            id: (location.pathname).substring(0, 49), // Ensure uniqueness and length less than 50
+            distractionFreeMode: false // Facebook-like distraction free mode
+        })
+
+        gitalk.render('gitalk-container')
+    }
+</script>
+                
+
+                    
+                                
+</body>
+
+</html>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://lipu-pan.top</id>
+    <title>Rice的算法博客</title>
+    <updated>2022-04-21T08:11:20.993Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://lipu-pan.top"/>
+    <link rel="self" href="https://lipu-pan.top/atom.xml"/>
+    <subtitle>Failure is simply the opportunity to begin again. This time more intelligently.
+-- Henry Ford</subtitle>
+    <logo>https://lipu-pan.top/images/avatar.png</logo>
+    <icon>https://lipu-pan.top/favicon.ico</icon>
+    <rights>All rights reserved 2022, Rice的算法博客</rights>
+    <entry>
+        <title type="html"><![CDATA[腾讯课堂的问题]]></title>
+        <id>https://lipu-pan.top/post/tyrant_tencent_classroom/</id>
+        <link href="https://lipu-pan.top/post/tyrant_tencent_classroom/">
+        </link>
+        <updated>2022-04-17T10:21:17.000Z</updated>
+        <content type="html"><![CDATA[<blockquote>
+<p>腾讯课堂的问题</p>
+</blockquote>
+<p>最近上海疫情，我们学校使用腾讯课堂上课。但是，这个腾讯课堂却有着很大的问题。这里这张图显示的是我打开腾讯课堂弹出来的图片。它想要问我要我的Chronium浏览器中的钥匙串访问！而钥匙串里装的都是我们的网站密码！如果不是MacOS系统权限做的好的话，我们的信息就被无耻的泄露了出去。我对腾讯课堂的这种偷偷摸摸感到强烈的不满！<br>
+<img src="https://pic.imgdb.cn/item/625be9e1239250f7c5f0218e.jpg" alt="你想干什么？" loading="lazy"></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[在疫情隔离后的1个月的感想]]></title>
+        <id>https://lipu-pan.top/post/covid-1-month/</id>
+        <link href="https://lipu-pan.top/post/covid-1-month/">
+        </link>
+        <updated>2022-04-17T10:10:57.000Z</updated>
+        <content type="html"><![CDATA[<p>上海已经隔离了接近一个月了，从最开始第一位同学被隔离，到全体“足不出户”。到现在有同学被确诊。</p>
+<h1 id="线上授课">线上授课</h1>
+<p>学校都改为了线上授课。线上授课的问题在于太多的同学都没有自制力，有些人喜欢在上课时干其他事情，比如看动漫等等，不过时间安排更为放松，省去了来回通勤的时间，以及可以在一些复课（美术，体育）上写作业，同学们可以迅速的写完作业，或是做一做自己的兴趣爱好（像是我用这个博客浪费时间……）等等。<br>
+我们班的线上上课主要使用腾讯课堂，腾讯课堂真的做的太垃圾了！它的Mac版本错误频繁，经常崩溃，而整个文件高达半个GB!而且<a href="https://rgb512.github.io/post/tyrant_tencent_classroom/">偷窥</a>我们的网站密码！</p>
+<h1 id="吃饭问题">吃饭问题</h1>
+<p>虽然政府的确是发物资了，但是物资是在有点少，哎，一两周才能发一次物资。而这个物资最多只够一家人吃一两天……我们只好去团菜，而我们居民全部关在家里，没有可以出去感染病毒的机会，平时出来也就是拿菜的时候来接触一点外面的人。那么所有的阳性病例不都是来自团菜吗？然而没有团菜人们都没有吃的，所以人们只能去团菜……这是因为政府对物资分配不当而导致的。<br>
+<img src="https://pic.imgdb.cn/item/625cb190239250f7c5185988.jpg" alt="政府发的菜" loading="lazy"></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Mac M1安装wine的究极解决办法！]]></title>
+        <id>https://lipu-pan.top/post/wine-fix/</id>
+        <link href="https://lipu-pan.top/post/wine-fix/">
+        </link>
+        <updated>2022-04-17T09:10:02.000Z</updated>
+        <summary type="html"><![CDATA[<p>在Mac M1中安装软件有时会出现问题，就比如著名Windows软件运行程序wine</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>在Mac M1中安装软件有时会出现问题，就比如著名Windows软件运行程序wine</p>
+<!-- more -->
+<h1 id="问题">问题</h1>
+<p>根据wine官网上的信息，使用brew install wine命令，安装过程都是很顺利的，但是当我尝试使用wine命令时：就会出现Bad CPU type in executable<br>
+就算使用Rosetta的arch --x86_64运行这个程序也不可以成功运行。这就需要一个另外的解决方法了。</p>
+<h1 id="解决">解决</h1>
+<p>使用一下命令</p>
+<pre><code class="language-bash">brew tap gcenx/wine
+brew install --cask --no-quarantine wine-crossover
+</code></pre>
+<p>当出现一下内容就是成功了！<br>
+<img src="https://pic.imgdb.cn/item/625c1e18239250f7c5512b1b.jpg" alt="" loading="lazy"><br>
+<img src="https://pic.imgdb.cn/item/625c8ca3239250f7c5f43e0e.jpg" alt="成功了！" loading="lazy"></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[一个关于算法复杂度的不复杂教程]]></title>
+        <id>https://lipu-pan.top/post/time_complexity/</id>
+        <link href="https://lipu-pan.top/post/time_complexity/">
+        </link>
+        <updated>2022-04-16T13:01:50.000Z</updated>
+        <summary type="html"><![CDATA[<p>你真的懂算法复杂度吗？</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>你真的懂算法复杂度吗？</p>
+<!-- more -->
+<p>时间复杂度并不是程序执行的时间，而是能表现程序程序所用时间随着数据的增长而时间的不断变高。通常使用<strong>O()<strong>来进行表示，其中n表示</strong>循环执行的次数</strong><br>
+例如一下代码<br>
+<img src="https://pic.imgdb.cn/item/625cac26239250f7c511a964.jpg" alt="" loading="lazy"><br>
+这里所使用的时间复杂度就是<strong>O(n+1)</strong>，没有意见吧？但是，当n变得越来越大时，公式中的低阶，这个常数1并没有对我们的程序的增长产生太大的影响，所以一般都会省略+1，所以可以直接忽略他们，变为<strong>O(n)</strong>。<br>
+<img src="https://pic.imgdb.cn/item/625cade7239250f7c513b8c0.jpg" alt="" loading="lazy"><br>
+这里的时间复杂度是<strong>O(n)</strong>，可能有同学要问了，这里不是执行了两行代码吗？不应该是<strong>O(2n)<strong>吗？这里需要注意，此处指的是</strong>代码综合执行时间</strong>，不是指的多少行代码！而且，这里也能反应<strong>O(n)<strong>并不是算法执行的时间，而是指的</strong>算法执行了多少次</strong>！所以虽然第一段代码和第二段代码都是<strong>O(n)</strong>，执行的时间和输出显然是不同的<br>
+再来看看下面的内容：<br>
+<img src="https://pic.imgdb.cn/item/625cade7239250f7c513b8c0.jpg" alt="" loading="lazy"><br>
+这里的算法复杂度<strong>是O(n^2)</strong>，我猜同学们已经知道为什么了吧？因为有两层循环，所以执行了n次<br>
+<img src="https://pic.imgdb.cn/item/625cadff239250f7c513d05b.jpg" alt="" loading="lazy"><br>
+这段代码是什么意思呢？请同学们自己想一想在打开折叠！</p>
+<details>
+<summary>答案</summary>
+有没有认真想？这段代码的算法复杂度就是<b>O(n^3)</b>，因为有三层循环。
+</details>
+<blockquote>
+<p>最后更新 4.18 （还有一点log)</p>
+</blockquote>
+]]></content>
+    </entry>
+</feed>
